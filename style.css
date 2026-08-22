@@ -1,3 +1,8 @@
+```css
+/* =========================
+   DASAR
+========================= */
+
 html {
     scroll-behavior: smooth;
 }
@@ -15,17 +20,29 @@ body {
         #FF1493,
         #FFB6C1
     );
+
     background-size: 400% 400%;
+
     animation: gradientShift 10s ease infinite;
-    overflow: hidden;
-    padding: 0;
+
+    overflow-x: hidden;
     margin: 0;
+    padding: 0;
+
     font-family: 'Poppins', sans-serif;
+
     color: rgb(56, 56, 56);
+
     min-height: 100vh;
 }
 
+
+/* =========================
+   BACKGROUND
+========================= */
+
 @keyframes gradientShift {
+
     0% {
         background-position: 0% 50%;
     }
@@ -37,6 +54,7 @@ body {
     100% {
         background-position: 0% 50%;
     }
+
 }
 
 
@@ -45,12 +63,17 @@ body {
 ========================= */
 
 .confetti-canvas {
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     pointer-events: none;
+
     z-index: 10;
 }
 
@@ -60,6 +83,7 @@ body {
 ========================= */
 
 .open {
+
     background: linear-gradient(
         45deg,
         #FFB6C1,
@@ -68,21 +92,32 @@ body {
         #FF1493,
         #FFB6C1
     );
+
     height: 100vh;
     width: 100vw;
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
-    z-index: 1;
+
+    z-index: 20;
+
     transition: opacity 0.5s ease;
+
     animation: pulse 2s infinite;
 }
 
+
 @keyframes pulse {
+
     0% {
         transform: scale(1);
     }
@@ -94,44 +129,75 @@ body {
     100% {
         transform: scale(1);
     }
+
 }
 
-.open h2 {
-    margin-bottom: 20px;
-    color: rgb(56, 56, 56);
-    text-align: center;
-    max-width: 90vw;
-    font-weight: 600;
-    font-size: 1.5em;
-}
+
+/* =========================
+   CARD PEMBUKA
+========================= */
 
 .open .card {
+
     background-color: rgba(255, 255, 255, 0.9);
+
     padding: 30px;
+
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
     text-align: center;
+
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
+
     width: 90%;
+
     max-width: 400px;
+
+    transition: transform 0.3s ease;
 }
+
 
 .open .card:hover {
     transform: scale(1.05);
 }
 
+
+.open h2 {
+
+    margin-bottom: 20px;
+
+    color: rgb(56, 56, 56);
+
+    text-align: center;
+
+    font-weight: 600;
+
+    font-size: 1.5em;
+}
+
+
 .open .card h3 {
+
     margin-top: 20px;
+
     font-weight: 400;
+
     font-size: 1em;
 }
 
+
 .open .card img {
+
     height: 100px;
+
     cursor: pointer;
+
     transition: transform 0.3s ease;
 }
+
 
 .open .card img:hover {
     transform: rotate(10deg);
@@ -139,63 +205,94 @@ body {
 
 
 /* =========================
-   BAGIAN UTAMA
+   BAGIAN ATAS
 ========================= */
 
 .atas {
+
     height: 100vh;
+
     width: 100%;
+
     display: flex;
+
     flex-direction: row;
+
     justify-content: space-around;
+
     align-items: center;
+
     text-align: center;
-    padding: 20px;
+
+    padding: 30px;
+
     margin: 0;
+
+    gap: 40px;
 }
 
 
-/* =========================
-   GAMBAR UTAMA
-========================= */
+/* GAMBAR ATAS */
 
 .atas img {
+
     height: 350px;
+
     width: auto;
+
     max-width: 45%;
-    object-fit: cover;
+
+    object-fit: contain;
+
     margin: 0;
-    padding: 0;
+
+    padding: 20px;
+
     background-color: rgba(255, 255, 255, 0.9);
+
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
     transition: transform 0.3s ease;
-    backdrop-filter: blur(10px);
 }
+
 
 .atas img:hover {
     transform: scale(1.05);
 }
 
 
-/* =========================
-   JUDUL
-========================= */
+/* JUDUL ATAS */
 
 .atas h2 {
+
     font-size: 1.5em;
+
     padding: 20px;
+
     margin: 0;
+
     background-color: rgba(255, 255, 255, 0.9);
+
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
     backdrop-filter: blur(10px);
+
     animation: bounce 2s infinite;
+
     width: 45%;
+
     max-width: 500px;
 }
 
+
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -211,6 +308,120 @@ body {
     60% {
         transform: translateY(-5px);
     }
+
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+}
+
+
+/* =========================
+   KARTU UTAMA
+========================= */
+
+.kartu-utama {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    min-height: 400px;
+
+    margin: 20px auto;
+
+    padding: 30px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    gap: 30px;
+}
+
+
+/* JUDUL ULTAH */
+
+.judul-ultah {
+
+    width: 50%;
+
+    text-align: center;
+}
+
+
+.judul-ultah h2 {
+
+    font-size: 2em;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* FOTO ULTAH */
+
+.foto-ultah {
+
+    width: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.foto-ultah img {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+}
+
+
+.foto-ultah img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -218,80 +429,39 @@ body {
    KARTU UCAPAN
 ========================= */
 
-.content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .kartu-ucapan {
+
     text-align: center;
+
     color: rgb(56, 56, 56);
+
     background-color: rgba(255, 255, 255, 0.9);
+
     font-weight: bold;
+
     font-size: 1.2em;
+
     padding: 20px;
+
     margin: 20px auto;
+
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
     width: 90%;
+
     max-width: 800px;
+
     backdrop-filter: blur(10px);
+
     transition: transform 0.3s ease;
 }
 
+
 .kartu-ucapan:hover {
     transform: translateY(-5px);
-}
-
-
-/* =========================
-   FOTO TAMBAHAN
-========================= */
-
-.foto {
-    width: 90%;
-    max-width: 400px;
-    padding-top: 0;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-}
-
-
-/* =========================
-   EFEK TYPING
-========================= */
-
-.typing {
-    overflow: hidden;
-    border-right: 2px solid rgb(56, 56, 56);
-    white-space: nowrap;
-    animation:
-        typing 3s steps(40, end),
-        blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: rgb(56, 56, 56);
-    }
 }
 
 
@@ -300,29 +470,48 @@ body {
 ========================= */
 
 .surprise-btn {
+
     display: block;
+
     margin: 30px auto;
+
     padding: 15px 30px;
+
     background: linear-gradient(
         45deg,
         #FF69B4,
         #FFC0CB
     );
+
     color: white;
+
     border: none;
+
     border-radius: 25px;
+
     font-size: 1.2em;
+
     font-weight: 600;
+
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.3);
+
     transition: all 0.3s ease;
+
     width: 80%;
+
     max-width: 300px;
 }
 
+
 .surprise-btn:hover {
+
     transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -331,26 +520,40 @@ body {
 ========================= */
 
 .surprise {
+
     display: none;
+
     text-align: center;
+
     margin: 20px auto;
+
     padding: 20px;
+
     background-color: rgba(255, 255, 255, 0.9);
+
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
     max-width: 600px;
+
     backdrop-filter: blur(10px);
+
     width: 90%;
 }
 
 
 /* =========================
-   CAKE GIF
+   FOTO SURPRISE
 ========================= */
 
 .cake-gif {
+
     width: 200px;
+
     max-width: 100%;
+
     margin-top: 20px;
 }
 
@@ -363,16 +566,15 @@ body {
 
     .atas {
         padding: 20px;
+        gap: 20px;
     }
 
     .atas img {
         height: 300px;
-        max-width: 45%;
     }
 
     .atas h2 {
         font-size: 1.4em;
-        width: 45%;
     }
 
     .kartu-ucapan {
@@ -380,9 +582,6 @@ body {
         padding: 18px;
     }
 
-    .cake-gif {
-        width: 180px;
-    }
 }
 
 
@@ -393,47 +592,117 @@ body {
 @media (max-width: 768px) {
 
     .atas {
+
         flex-direction: column;
+
         justify-content: center;
+
         gap: 20px;
+
         padding: 20px;
     }
 
+
     .atas img {
+
         height: 250px;
+
         width: auto;
+
         max-width: 80%;
+
+        padding: 15px;
     }
 
+
     .atas h2 {
+
         font-size: 1.3em;
+
         padding: 15px;
+
         width: 90%;
+
         max-width: 500px;
     }
 
+
+    /* KARTU UTAMA HP */
+
+    .kartu-utama {
+
+        flex-direction: column;
+
+        width: 90%;
+
+        min-height: auto;
+
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+
+    .judul-ultah {
+
+        width: 100%;
+    }
+
+
+    .judul-ultah h2 {
+
+        font-size: 1.4em;
+    }
+
+
+    .foto-ultah {
+
+        width: 100%;
+    }
+
+
+    .foto-ultah img {
+
+        width: 80%;
+
+        height: auto;
+
+        max-width: 300px;
+    }
+
+
     .kartu-ucapan {
+
         font-size: 1em;
+
         padding: 15px;
+
         margin: 15px auto;
     }
+
 
     .open .card img {
         height: 80px;
     }
 
+
     .open .card h3 {
         font-size: 0.9em;
     }
+
 
     .cake-gif {
         width: 150px;
     }
 
+
     .surprise-btn {
+
         font-size: 1em;
+
         padding: 12px 25px;
     }
+
 }
 
 
@@ -448,52 +717,81 @@ body {
         padding: 15px;
     }
 
+
     .atas img {
         height: 200px;
-        width: auto;
         max-width: 85%;
     }
+
 
     .atas h2 {
         font-size: 1.1em;
         padding: 10px;
-        width: 90%;
     }
 
+
+    .kartu-utama {
+
+        width: 92%;
+
+        padding: 15px;
+
+        gap: 15px;
+    }
+
+
+    .judul-ultah h2 {
+        font-size: 1.2em;
+    }
+
+
+    .foto-ultah img {
+
+        width: 85%;
+
+        max-width: 280px;
+    }
+
+
     .kartu-ucapan {
+
         font-size: 0.9em;
+
         padding: 10px;
+
         margin: 10px auto;
     }
+
 
     .open .card {
         padding: 20px;
     }
 
+
     .open .card img {
         height: 60px;
     }
+
 
     .open .card h3 {
         font-size: 0.8em;
     }
 
+
     .cake-gif {
         width: 150px;
-        max-width: 100%;
     }
 
+
     .surprise-btn {
+
         font-size: 0.9em;
+
         padding: 10px 20px;
+
         width: 90%;
     }
 
-    .typing {
-        animation:
-            typing 2s steps(30, end),
-            blink-caret 0.75s step-end infinite;
-    }
 }
 
 
@@ -507,21 +805,41 @@ body {
         height: 170px;
     }
 
+
     .atas h2 {
         font-size: 1em;
     }
 
+
+    .kartu-utama {
+        padding: 10px;
+    }
+
+
+    .judul-ultah h2 {
+        font-size: 1em;
+    }
+
+
     .kartu-ucapan {
+
         font-size: 0.8em;
+
         padding: 8px;
     }
+
 
     .cake-gif {
         width: 100px;
     }
 
+
     .surprise-btn {
+
         font-size: 0.8em;
+
         padding: 8px 15px;
     }
+
 }
+```
