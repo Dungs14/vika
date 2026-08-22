@@ -1,63 +1,260 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>HBD SAYANGKUH❤️</title>
+
     <link href="style.css" rel="stylesheet" type="text/css">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="icon" href="images/flower.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
+
 <body class="body">
+
+    <!-- =========================
+         AUDIO
+    ========================== -->
+
     <audio class="audio" src="images/hbd (1).mp3" autoplay loop>
         Browser Anda tidak mendukung pemutaran audio.
     </audio>
-    
-    <!-- Confetti Canvas for Effects -->
+
+
+    <!-- =========================
+         CONFETTI
+    ========================== -->
+
     <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
-    
+
+
+    <!-- =========================
+         HALAMAN PEMBUKA
+    ========================== -->
+
     <div class="open">
+
         <div class="card">
-            <h2>Ehhh ada surat nih ay</h2>
-            <img onclick="mulai()" src="images/mail.png" alt="Gambar surat">
-            <h3>Di klik yaa suratnya</h3>
+
+            <h2>
+                Ehhh ada surat nih ay
+            </h2>
+
+            <img
+                onclick="mulai()"
+                src="images/mail.png"
+                alt="Gambar surat"
+            >
+
+            <h3>
+                Di klik yaa suratnya
+            </h3>
+
         </div>
+
     </div>
+
+
+    <!-- =========================
+         BAGIAN ATAS
+    ========================== -->
 
     <div class="atas" id="atas">
-        <img onclick="mulai()" src="images/ultah.png" alt="Gambar ucapan ulang tahun">
-        <h2>Scroll ke bawah yaa, pelan pelan tapiii..</h2>
+
+        <img
+            onclick="mulai()"
+            src="images/ultah.png"
+            alt="Gambar ucapan ulang tahun"
+        >
+
+        <h2>
+            Scroll ke bawah yaa,<br>
+            pelan pelan tapiii..
+        </h2>
+
     </div>
+
+
+    <!-- =========================
+         CONTENT
+    ========================== -->
 
     <div class="content">
-        <p class="kartu-ucapan" data-aos="fade-right" data-aos-delay="100">
-            &#127881 HAPPY BIRTHDAY VIKA GUSTIA❤️&#127881
-            
-            <img class="foto" src="images/vikaa.jpeg" alt="Foto Vikaa">
+
+
+        <!-- =========================
+             UCAPAN UTAMA + FOTO
+        ========================== -->
+
+        <div
+            class="kartu-utama"
+            data-aos="fade-up"
+        >
+
+            <div class="judul-ultah">
+
+                <h2>
+                    🎉 HAPPY BIRTHDAY<br>
+                    VIKA GUSTIA ❤️🎉
+                </h2>
+
+            </div>
+
+
+            <div class="foto-ultah">
+
+                <img
+                    src="images/vikaa.jpeg"
+                    alt="Foto Vikaa"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             UCAPAN 1
+        ========================== -->
+
+        <p
+            class="kartu-ucapan"
+            data-aos="fade-right"
+            data-aos-delay="300"
+        >
+            Semoga kamu selalu bahagia yaa,
+            bukan cuma hari ini tapi setiap hari
         </p>
 
-        
- <p class="kartu-ucapan" data-aos="fade-right" data-aos-delay="300">Semoga kamu selalu bahagia yaa, bukan cuma hari ini tapi setiap hari</p>
-<p class="kartu-ucapan" data-aos="fade-left" data-aos-delay="400">Semoga kamu selalu sehat dan jangan lupa jaga diri baik-baik</p>
-<p class="kartu-ucapan" data-aos="fade-right" data-aos-delay="500">Semoga semua yang kamu inginkan bisa tercapai, aku bakal selalu dukung kamu</p>
-<p class="kartu-ucapan" data-aos="fade-left" data-aos-delay="600">Semoga kuliahnya lancar, lulus tepat waktu, Amiin</p>
-<p class="kartu-ucapan" data-aos="fade-right" data-aos-delay="700">Makasih yaa udah hadir dan jadi bagian penting dalam hidup aku</p>
-<p class="kartu-ucapan" data-aos="fade-left" data-aos-delay="800">Happy birthday yaa, Sayang❤️. Semoga kita tetap bareng dan bisa terus bikin cerita bareng ❤️</p>
-        
-        <!-- Interactive Button -->
-        <button class="surprise-btn" onclick="showSurprise()">Klik untuk Surprise!</button>
-        <div class="surprise" id="surprise">
-            <p>🎉 HIYYAAAH 🎂</p>
-            <img src="images/davik.jpeg" alt="hiyaaa" class="cake-gif">
+
+        <!-- =========================
+             UCAPAN 2
+        ========================== -->
+
+        <p
+            class="kartu-ucapan"
+            data-aos="fade-left"
+            data-aos-delay="400"
+        >
+            Semoga kamu selalu sehat dan
+            jangan lupa jaga diri baik-baik
+        </p>
+
+
+        <!-- =========================
+             UCAPAN 3
+        ========================== -->
+
+        <p
+            class="kartu-ucapan"
+            data-aos="fade-right"
+            data-aos-delay="500"
+        >
+            Semoga semua yang kamu inginkan
+            bisa tercapai, aku bakal selalu
+            dukung kamu
+        </p>
+
+
+        <!-- =========================
+             UCAPAN 4
+        ========================== -->
+
+        <p
+            class="kartu-ucapan"
+            data-aos="fade-left"
+            data-aos-delay="600"
+        >
+            Semoga kuliahnya lancar,
+            lulus tepat waktu, Amiin
+        </p>
+
+
+        <!-- =========================
+             UCAPAN 5
+        ========================== -->
+
+        <p
+            class="kartu-ucapan"
+            data-aos="fade-right"
+            data-aos-delay="700"
+        >
+            Makasih yaa udah hadir dan jadi
+            bagian penting dalam hidup aku
+        </p>
+
+
+        <!-- =========================
+             UCAPAN 6
+        ========================== -->
+
+        <p
+            class="kartu-ucapan"
+            data-aos="fade-left"
+            data-aos-delay="800"
+        >
+            Happy birthday yaa, Sayang ❤️
+            Semoga kita tetap bareng dan bisa
+            terus bikin cerita bareng ❤️
+        </p>
+
+
+        <!-- =========================
+             TOMBOL SURPRISE
+        ========================== -->
+
+        <button
+            class="surprise-btn"
+            onclick="showSurprise()"
+        >
+            Klik untuk Surprise!
+        </button>
+
+
+        <!-- =========================
+             SURPRISE
+        ========================== -->
+
+        <div
+            class="surprise"
+            id="surprise"
+        >
+
+            <p>
+                🎉 HIYYAAAH 🎂
+            </p>
+
+            <img
+                src="images/davik.jpeg"
+                alt="hiyaaa"
+                class="cake-gif"
+            >
+
         </div>
+
+
     </div>
 
+
+    <!-- =========================
+         SCRIPT
+    ========================== -->
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
+```
 
-
-
-
+**Penting:** `index.html` di atas harus dipasangkan dengan CSS tambahan untuk `.kartu-utama`, `.judul-ultah`, dan `.foto-ultah` yang saya kasih sebelumnya. Kalau kamu mau, saya juga bisa kasih **full `style.css` yang sudah digabung semuanya**, jadi tinggal copy-paste satu file dan tidak perlu mencari bagian CSS satu-satu.
