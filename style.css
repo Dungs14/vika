@@ -2,24 +2,47 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(45deg, #FFB6C1, #FF69B4, #FFC0CB, #FF1493, #FFB6C1);
+    background: linear-gradient(
+        45deg,
+        #FFB6C1,
+        #FF69B4,
+        #FFC0CB,
+        #FF1493,
+        #FFB6C1
+    );
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite;
     overflow: hidden;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: rgb(56, 56, 56);
-    min-height: 100vh; /* Ensure full height on mobile */
+    min-height: 100vh;
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
+
+
+/* =========================
+   CONFETTI
+========================= */
 
 .confetti-canvas {
     position: fixed;
@@ -31,12 +54,25 @@ body {
     z-index: 10;
 }
 
+
+/* =========================
+   HALAMAN PEMBUKA
+========================= */
+
 .open {
-    background: linear-gradient(45deg, #FFB6C1, #FF69B4, #FFC0CB, #FF1493, #FFB6C1);
+    background: linear-gradient(
+        45deg,
+        #FFB6C1,
+        #FF69B4,
+        #FFC0CB,
+        #FF1493,
+        #FFB6C1
+    );
     height: 100vh;
     width: 100vw;
     position: fixed;
     top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,18 +83,26 @@ body {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .open h2 {
     margin-bottom: 20px;
     color: rgb(56, 56, 56);
     text-align: center;
-    max-width: 90vw; /* Responsive width */
+    max-width: 90vw;
     font-weight: 600;
-    font-size: 1.5em; /* Base size */
+    font-size: 1.5em;
 }
 
 .open .card {
@@ -69,7 +113,7 @@ body {
     text-align: center;
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease;
-    width: 90%; /* Responsive width */
+    width: 90%;
     max-width: 400px;
 }
 
@@ -93,50 +137,86 @@ body {
     transform: rotate(10deg);
 }
 
+
+/* =========================
+   BAGIAN UTAMA
+========================= */
+
 .atas {
     height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     padding: 20px;
+    margin: 0;
 }
 
+
+/* =========================
+   GAMBAR UTAMA
+========================= */
+
 .atas img {
-    height: 200px;
-    margin-bottom: 20px;
-    padding: 20px;
+    height: 350px;
+    width: auto;
+    max-width: 45%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
     backdrop-filter: blur(10px);
-    width: 80%; /* Responsive */
-    max-width: 300px;
 }
 
 .atas img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+
+
+/* =========================
+   JUDUL
+========================= */
 
 .atas h2 {
     font-size: 1.5em;
     padding: 20px;
+    margin: 0;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     animation: bounce 2s infinite;
-    width: 90%; /* Responsive */
+    width: 45%;
     max-width: 500px;
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
 }
+
+
+/* =========================
+   KARTU UCAPAN
+========================= */
 
 .content {
     padding: 20px;
@@ -165,37 +245,69 @@ body {
     transform: translateY(-5px);
 }
 
+
+/* =========================
+   FOTO TAMBAHAN
+========================= */
+
 .foto {
     width: 90%;
-    padding-top: 0px;
     max-width: 400px;
+    padding-top: 0;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
 }
 
+
+/* =========================
+   EFEK TYPING
+========================= */
+
 .typing {
     overflow: hidden;
     border-right: 2px solid rgb(56, 56, 56);
     white-space: nowrap;
-    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation:
+        typing 3s steps(40, end),
+        blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: rgb(56, 56, 56); }
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: rgb(56, 56, 56);
+    }
 }
+
+
+/* =========================
+   TOMBOL SURPRISE
+========================= */
 
 .surprise-btn {
     display: block;
     margin: 30px auto;
     padding: 15px 30px;
-    background: linear-gradient(45deg, #FF69B4, #FFC0CB);
+    background: linear-gradient(
+        45deg,
+        #FF69B4,
+        #FFC0CB
+    );
     color: white;
     border: none;
     border-radius: 25px;
@@ -204,7 +316,7 @@ body {
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    width: 80%; /* Responsive */
+    width: 80%;
     max-width: 300px;
 }
 
@@ -212,6 +324,11 @@ body {
     transform: scale(1.1);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
+
+
+/* =========================
+   SURPRISE
+========================= */
 
 .surprise {
     display: none;
@@ -226,116 +343,185 @@ body {
     width: 90%;
 }
 
+
+/* =========================
+   CAKE GIF
+========================= */
+
 .cake-gif {
     width: 200px;
+    max-width: 100%;
     margin-top: 20px;
-    max-width: 100%; /* Responsive */
 }
 
-/* Media Queries for Better Responsiveness */
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1024px) {
-    .atas img {
-        height: 180px;
-        width: 70%;
+
+    .atas {
+        padding: 20px;
     }
+
+    .atas img {
+        height: 300px;
+        max-width: 45%;
+    }
+
     .atas h2 {
         font-size: 1.4em;
+        width: 45%;
     }
+
     .kartu-ucapan {
         font-size: 1.1em;
         padding: 18px;
     }
+
     .cake-gif {
         width: 180px;
     }
 }
 
+
+/* =========================
+   HP
+========================= */
+
 @media (max-width: 768px) {
-    .atas img {
-        height: 150px;
-        width: 80%;
+
+    .atas {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
     }
+
+    .atas img {
+        height: 250px;
+        width: auto;
+        max-width: 80%;
+    }
+
     .atas h2 {
         font-size: 1.3em;
         padding: 15px;
+        width: 90%;
+        max-width: 500px;
     }
+
     .kartu-ucapan {
         font-size: 1em;
         padding: 15px;
         margin: 15px auto;
     }
+
     .open .card img {
         height: 80px;
     }
+
     .open .card h3 {
         font-size: 0.9em;
     }
+
     .cake-gif {
         width: 150px;
     }
+
     .surprise-btn {
         font-size: 1em;
         padding: 12px 25px;
     }
 }
 
+
+/* =========================
+   HP KECIL
+========================= */
+
 @media (max-width: 480px) {
-    .atas img {
-        height: 120px;
-        width: 90%;
+
+    .atas {
+        gap: 15px;
         padding: 15px;
     }
+
+    .atas img {
+        height: 200px;
+        width: auto;
+        max-width: 85%;
+    }
+
     .atas h2 {
         font-size: 1.1em;
         padding: 10px;
+        width: 90%;
     }
+
     .kartu-ucapan {
         font-size: 0.9em;
         padding: 10px;
         margin: 10px auto;
     }
+
     .open .card {
         padding: 20px;
     }
+
     .open .card img {
         height: 60px;
     }
+
     .open .card h3 {
         font-size: 0.8em;
     }
+
     .cake-gif {
-        width: 500px;
+        width: 150px;
+        max-width: 100%;
     }
+
     .surprise-btn {
         font-size: 0.9em;
         padding: 10px 20px;
         width: 90%;
     }
+
     .typing {
-        animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite; /* Faster typing on small screens */
+        animation:
+            typing 2s steps(30, end),
+            blink-caret 0.75s step-end infinite;
     }
 }
 
+
+/* =========================
+   HP SANGAT KECIL
+========================= */
+
 @media (max-width: 320px) {
+
     .atas img {
-        height: 100px;
+        height: 170px;
     }
+
     .atas h2 {
         font-size: 1em;
     }
+
     .kartu-ucapan {
         font-size: 0.8em;
         padding: 8px;
     }
+
     .cake-gif {
         width: 100px;
     }
+
     .surprise-btn {
         font-size: 0.8em;
         padding: 8px 15px;
     }
 }
-
-
-
-
